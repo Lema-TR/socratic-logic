@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maus (ማውስ) - Bilingual Book Reader (English & Amharic)</title>
+  <meta name="description" content="Fancy bilingual parallel reader for Maus: A Survivor's Tale by Art Spiegelman, featuring English original and Amharic translation.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="view-mode-comic">
+
+  <!-- Top App Navigation -->
+  <header class="app-header">
+    <div class="header-top">
+      <div class="brand-section">
+        <div class="brand-icon">🐀</div>
+        <div class="brand-title">
+          <span>MAUS : A SURVIVOR'S TALE</span>
+          <span class="brand-subtitle">ማውስ፡ የተረፈው ሰው ታሪክ (በአማርኛ እና በእንግሊዝኛ)</span>
+        </div>
+        <a href="socratic_logic.html" class="book-switcher-badge" title="Switch to Socratic Logic Reader" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); color: #f59e0b; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-decoration: none; margin-left: 10px;">
+          🏛️ Read Socratic Logic
+        </a>
+      </div>
+
+      <div class="header-controls">
+        <!-- View Mode -->
+        <div class="btn-group" title="Select View Layout">
+          <button class="btn active" data-mode-btn="comic">🎨 Comic + Dialogue</button>
+          <button class="btn" data-mode-btn="parallel">📖 Parallel Columns</button>
+        </div>
+
+        <!-- Language Display -->
+        <div class="btn-group" title="Language Filter">
+          <button class="btn active" data-lang-btn="both">🌐 Both</button>
+          <button class="btn" data-lang-btn="english-only">🇺🇸 EN</button>
+          <button class="btn" data-lang-btn="amharic-only">🇪🇹 አማርኛ</button>
+        </div>
+
+        <!-- Themes -->
+        <div class="btn-group" title="Color Theme">
+          <button class="btn active" data-theme-btn="dark">🌙 Dark</button>
+          <button class="btn" data-theme-btn="sepia">📜 Sepia</button>
+          <button class="btn" data-theme-btn="light">☀️ Light</button>
+        </div>
+
+        <!-- Font Size Adjusters -->
+        <div class="btn-group" title="Adjust Font Size">
+          <button class="btn btn-icon" id="font-decrease" title="Decrease Font">A-</button>
+          <button class="btn btn-icon" id="font-increase" title="Increase Font">A+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-Navbar: Batch & Page Navigation -->
+    <div class="sub-navbar">
+      <div class="sub-nav-content">
+        <div class="batch-selector btn-group" title="Select Batch">
+          <button class="btn" data-batch-btn="all">📚 All (1–50)</button>
+          <button class="btn" data-batch-btn="batch_1">Batch 1 (1–10)</button>
+          <button class="btn" data-batch-btn="batch_2">Batch 2 (11–20)</button>
+          <button class="btn" data-batch-btn="batch_3">Batch 3 (21–30)</button>
+          <button class="btn" data-batch-btn="batch_4">Batch 4 (31–40)</button>
+          <button class="btn active" data-batch-btn="batch_5">✨ Batch 5 (41–50)</button>
+        </div>
+
+        <!-- Page Navigator Pills -->
+        <nav class="page-navigator" id="page-navigator" aria-label="Page navigation">
+          <!-- Dynamic Page Pills (1..50) -->
+        </nav>
+
+        <!-- Live Search Filter -->
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" id="search-input" placeholder="Search / ፈልግ (EN or አማርኛ)..." autocomplete="off">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Bilingual Book Reader -->
+  <main class="reader-container">
+    <div id="reader-content">
+      <!-- Dynamically generated book pages will render here -->
+    </div>
+  </main>
+
+  <!-- Floating Bottom Controls -->
+  <div class="floating-bottom-bar" id="floating-bar">
+    <button class="btn btn-icon" id="prev-page-btn" title="Previous Page (Left Arrow)">◀ Prev</button>
+    <div class="progress-indicator" id="reading-progress">Page 41 of 50</div>
+    <button class="btn btn-icon" id="next-page-btn" title="Next Page (Right Arrow)">Next ▶</button>
+  </div>
+
+  <!-- Lightbox Modal for Zooming Comic Pages -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-label="Zoomed Comic Page">
+    <button class="lightbox-close" id="lightbox-close" title="Close (Esc)">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Zoomed view">
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <p><strong>Maus: A Survivor's Tale</strong> by Art Spiegelman. Translated to Amharic (አማርኛ) for study and parallel reading.</p>
+      <p>Batch 5 of 16 complete (Pages 1 to 50). Chapter Three ("Prisoner of War") frontlines and POW camp are translated. Keyboard shortcuts: <code>← / →</code> to navigate pages, <code>T</code> to change theme, <code>M</code> to change layout.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

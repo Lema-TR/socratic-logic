@@ -1,0 +1,52 @@
+{
+  "name": "Socratic Logic (ሶክራታዊ ሎጂክ) - Bilingual Reader",
+  "short_name": "Socratic Logic",
+  "description": "Bilingual English-Amharic parallel reader for Peter Kreeft's Socratic Logic (Edition 3.1) with interactive study cards and high-resolution original facsimile scans.",
+  "start_url": "./socratic_logic.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0d16",
+  "theme_color": "#0a0d16",
+  "categories": ["books", "education", "philosophy", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/favicon-64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Batch 5 (Latest)",
+      "short_name": "Batch 5",
+      "description": "Jump to Part I: The First Act of the Mind",
+      "url": "./socratic_logic.html#page-41"
+    },
+    {
+      "name": "All Pages (1–50)",
+      "short_name": "All Pages",
+      "description": "Read all translated pages continuously",
+      "url": "./socratic_logic.html#page-1"
+    }
+  ]
+}

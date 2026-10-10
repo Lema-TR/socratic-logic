@@ -7,3 +7,4 @@ pages/
 build_*.py
 generate_*.py
 update_*.py
+images/page_*.webp
